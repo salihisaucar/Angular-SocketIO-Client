@@ -2,7 +2,7 @@ import { Observable } from "rxjs/observable";
 import { Store, select } from "@ngrx/store";
 import { Component, OnInit } from "@angular/core";
 
-import { MessageService } from "./../services/message.service";
+import { MessageService } from "../services/message.service";
 import * as fromAppReducer from "../app.reducer";
 import * as fromAppActions from "../app.actions";
 

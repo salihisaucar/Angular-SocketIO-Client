@@ -1,6 +1,6 @@
 import * as fromActions from "src/app/app.actions";
-import * as appHelper from "../app/app.hepler";
-import * as appDb from "../app/database/database";
+import * as appHelper from "./app.hepler";
+import * as appDb from "./database/database";
 
 export interface State {
   userId: number;
