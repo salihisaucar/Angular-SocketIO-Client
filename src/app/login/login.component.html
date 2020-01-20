@@ -1,0 +1,23 @@
+<div class="form-row login">
+  <div class="form-group ">
+    <label for="country">You can choose user That you want to manage</label>
+    <select
+      id="country"
+      (change)="setConversationToken($event.target.value)"
+      class="form-control"
+    >
+      <option value="0" selected>Choose User...</option>
+      <option value="salihisaucar">Salih Isa Ucar</option>
+      <option value="user2">User 2</option>
+      <option value="user3">User 3</option>
+    </select>
+    <br />
+    <button
+      (click)="updateState()"
+      class="btn btn-primary btn-lg btn-block"
+      type="submit"
+    >
+      Login
+    </button>
+  </div>
+</div>

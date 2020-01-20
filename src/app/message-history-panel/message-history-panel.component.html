@@ -1,0 +1,33 @@
+<div class="mesgs">
+  <div class="msg_history">
+    <div *ngFor="let message of messageHistoryList">
+      <app-incoming-message
+        *ngIf="message.userId != (userId$ | async)"
+        message="{{ message.message }}"
+      ></app-incoming-message>
+      <app-outgoing-message
+        *ngIf="message.userId == (userId$ | async)"
+        message="{{ message.message }}"
+      ></app-outgoing-message>
+    </div>
+  </div>
+  <img
+    *ngIf="isTypingActive"
+    height="40px"
+    src="../../assets/img/typing.gif"
+    alt=""
+  />
+  <div class="type_msg">
+    <div class="input_msg_write">
+      <input
+        type="text"
+        [value]="message"
+        (input)="message = $event.target.value"
+        (keydown)="sendTypingInformation($event)"
+        (keyup.enter)="sendMessage()"
+        class="write_msg"
+        placeholder="Type a message"
+      />
+    </div>
+  </div>
+</div>

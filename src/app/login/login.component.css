@@ -1,0 +1,7 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.login {
+  top: 20%;
+  position: absolute;
+  left: 35%;
+}
